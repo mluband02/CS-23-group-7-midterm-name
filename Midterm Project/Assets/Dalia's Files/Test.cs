@@ -7,7 +7,7 @@ public class Test : MonoBehaviour
     private Grid grid;
     // Start is called before the first frame update
     private void Start() {
-        grid = new Grid(10, 5, 2f, new Vector3(-10, -5)); //change f for smaller grid 
+        grid = new Grid(16, 10, 1f, new Vector3(-8f, -5f)); //change f for smaller grid 
     }
 
     private void Update() {
