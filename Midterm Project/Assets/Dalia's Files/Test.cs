@@ -1,28 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Test : MonoBehaviour
 {
     private Grid grid;
-    GameObject Cursor;
+    public GameObject Cursor;
+    public GameObject Ground;
+    // public GameObject Sun;
+    public GameObject winText;
     // Start is called before the first frame update
     private void Start() {
+        winText.SetActive(false);
         grid = new Grid(16, 10, 1f, new Vector3(-8f, -5f)); //change f for smaller grid 
     }
 
     private void Update() {
         if (Input.GetKey(KeyCode.Space)) {
+            // Instantiate(Ground, GameObject.Find("Cursor").transform.position, Quaternion.identity);
             //change value inside grid with click:
-            grid.SetValue(GameObject.Find("Cursor").transform.position, 56);
+            grid.SetValue(GameObject.Find("Cursor").transform.position, Instantiate(Ground, GameObject.Find("Cursor").transform.position, Quaternion.identity));
         }
 
         //reading values on right click
-        if (Input.GetKey(KeyCode.Space)) {
-            //change value inside grid with click:
-            Debug.Log(grid.GetValue(GetMouseWorldPosition()));
-        }
+        // if (Input.GetKey(KeyCode.Space)) {
+        //     //change value inside grid with click:
+        //     Debug.Log(grid.GetValue(GetMouseWorldPosition()));
+        // }
     }
+
 
     public static Vector3 GetMouseWorldPosition() {
         Vector3 vec = GetMouseWorldPositionWithZ(Input.mousePosition, Camera.main);
@@ -42,5 +49,7 @@ public class Test : MonoBehaviour
         Vector3 worldPosition = worldCamera.ScreenToWorldPoint(screenPosition);
         return worldPosition;
     }
+
+    
 
 }

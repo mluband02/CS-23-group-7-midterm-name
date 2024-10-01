@@ -29,7 +29,7 @@ public class Grid {
         for (int x = 0; x < gridArray.GetLength(0); x++) {
             for (int y = 0; y < gridArray.GetLength(1); y++) {
                 //Below to debug, revert with no assignment later
-                debugTextArray[x, y] = CreateWorldText(gridArray[x, y].ToString(), null, GetWorldPosition(x, y) + new Vector3(cellsize, cellsize) * .5f, 10, Color.white, TextAnchor.MiddleCenter);
+                // debugTextArray[x, y] = CreateWorldText(gridArray[x, y].ToString(), null, GetWorldPosition(x, y) + new Vector3(cellsize, cellsize) * .5f, 10, Color.white, TextAnchor.MiddleCenter);
                 Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x, y + 1), Color.white, 100f);
                 Debug.DrawLine(GetWorldPosition(x, y), GetWorldPosition(x + 1, y), Color.white, 100f);
 
@@ -58,16 +58,16 @@ public class Grid {
     }
 
     // Set value of a cell in grid
-    public void SetValue(int x, int y, int value) {
+    public void SetValue(int x, int y, GameObject value) {
         // Ignore invalid values
         if (x >= 0 && x < width && y < height) {
-            gridArray[x, y] = value;
-            debugTextArray[x, y].text = gridArray[x, y].ToString();
+            // gridArray[x, y] = value;
+            // debugTextArray[x, y].text = gridArray[x, y].ToString();
         }
     }
 
     //worldPosition version of SetValue
-    public void SetValue(Vector3 worldPosition, int value) {
+    public void SetValue(Vector3 worldPosition, GameObject value) {
         int x, y;
         GetXY(worldPosition, out x, out y);
         SetValue(x, y, value);

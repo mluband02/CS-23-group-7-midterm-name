@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject Sun;
+    public GameObject winText;
     //When code is in a region, you can minimize it (there should be a 
         //little minus sign on the left you can click)
     #region variables
@@ -165,12 +168,23 @@ public class PlayerMovement : MonoBehaviour
         state = "jumping";
     }
 
+    public void OnTriggerEnter(Collider other) {
+        // Debug.Log("IN FUNCTION!");
+        if(other.gameObject.tag == "Sun") {
+            Debug.Log("TOUCHED!");
+            GameObject.Find("Sun").SetActive(false);
+            winText.SetActive(true);
+        }
+    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //Note to the reader - this is implemented with sqrMagnitude and dust_threshold squared
         //because square root is (used in regular magnitude) is an expensive operation
+        
 
+        
         if(collision.relativeVelocity.sqrMagnitude > dust_threshold * dust_threshold)
         {
             Instantiate(dust, transform);
