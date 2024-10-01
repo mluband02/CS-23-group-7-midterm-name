@@ -5,19 +5,20 @@ using UnityEngine;
 public class Test : MonoBehaviour
 {
     private Grid grid;
+    GameObject Cursor;
     // Start is called before the first frame update
     private void Start() {
         grid = new Grid(16, 10, 1f, new Vector3(-8f, -5f)); //change f for smaller grid 
     }
 
     private void Update() {
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetKey(KeyCode.Space)) {
             //change value inside grid with click:
-            grid.SetValue(GetMouseWorldPosition(), 56);
+            grid.SetValue(GameObject.Find("Cursor").transform.position, 56);
         }
 
         //reading values on right click
-        if (Input.GetMouseButtonDown(1)) {
+        if (Input.GetKey(KeyCode.Space)) {
             //change value inside grid with click:
             Debug.Log(grid.GetValue(GetMouseWorldPosition()));
         }
