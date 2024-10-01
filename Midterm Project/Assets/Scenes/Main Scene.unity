@@ -206,11 +206,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4540737328117837248, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.012
+      value: 7.46
       objectReference: {fileID: 0}
     - target: {fileID: 4540737328117837248, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.58
+      value: -2.17
       objectReference: {fileID: 0}
     - target: {fileID: 4540737328117837248, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -356,18 +356,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &389331215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 389331209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d47cfe14db4b8489295092d72202e082, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &502773064
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,11 +861,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2931110613445598069, guid: 1625796e5ee2f3d41a756b1cc135bb14, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 2931110613445598069, guid: 1625796e5ee2f3d41a756b1cc135bb14, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -4.2
       objectReference: {fileID: 0}
     - target: {fileID: 2931110613445598069, guid: 1625796e5ee2f3d41a756b1cc135bb14, type: 3}
       propertyPath: m_LocalPosition.z
@@ -991,7 +979,4 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7469313791106905845, guid: c55614c8fee38426394b85b35180ca47, type: 3}
       insertIndex: -1
       addedObject: {fileID: 389331214}
-    - targetCorrespondingSourceObject: {fileID: 7469313791106905845, guid: c55614c8fee38426394b85b35180ca47, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 389331215}
   m_SourcePrefab: {fileID: 100100000, guid: c55614c8fee38426394b85b35180ca47, type: 3}
