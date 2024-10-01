@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
     //Input a jump, doesn't currently work with controller input
     bool jumpPress()
     {
-        return Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W);
+        return Input.GetKeyDown(KeyCode.W);
     }
 
     //Is in a state where we want to buffer jump commands
@@ -100,9 +100,20 @@ public class PlayerMovement : MonoBehaviour
 
     //In fixed update we put physics calculations which we want to be frame independent
     private void FixedUpdate()
-    {
+    {   
+        // float to keep track of horizontal movements
+        float horizontal = 0;
+        if (Input.GetKey(KeyCode.A)){
+            // move left
+            horizontal = -1;
+        } 
+        if (Input.GetKey(KeyCode.D)){
+            // move right
+            horizontal = 1;
+        } 
+
         //Sets the horizontal velocity to the input times the speed
-        body.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
+        body.velocity = new Vector2(horizontal * speed, body.velocity.y);
 
         //Runs the state machine which determines where in the jump you are
         switch (state)
@@ -129,9 +140,10 @@ public class PlayerMovement : MonoBehaviour
 
                 body.velocity = new Vector2(body.velocity.x, Mathf.Min(body.velocity.y, 0));
 
-                if (Input.GetAxis("Vertical") == 1 && Time.time < jump_begin + jump_time + hang_time)
+                if (Input.GetKey(KeyCode.W) && Time.time < jump_begin + jump_time + hang_time){
                     state = "floating";
-
+                }
+                
                 break;
         }
     }
