@@ -53,7 +53,10 @@ MonoBehaviour:
   dust_threshold: 20
   jump_impulse: 13
   speed: 10
+  air_accel: 1
+  air_speed: 3
   body: {fileID: 4540737328117837254}
+  winText: {fileID: 0}
   jumpable:
     serializedVersion: 2
     m_Bits: 0

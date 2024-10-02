@@ -18,6 +18,19 @@ public class PlayerMovement : MonoBehaviour
     public float jump_impulse;
     [Tooltip("Horizontal Speed")]
     public float speed;
+    
+    [Tooltip("Horizontal Air Accel")]
+    public float air_accel;
+    
+    [Tooltip("Horizontal Air Friction")]
+    public float air_fric;
+    
+    [Tooltip("Max Air Speed")]
+    public float air_speed;
+    
+    [Tooltip("Gravity")]
+    public float gravity;
+    
     [Tooltip("Rigidbody that controls this object (serialized to save a call to GameObject.Find())")]
     public Rigidbody2D body;
 
@@ -33,11 +46,6 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("Time during which the player can still jump after leaving the ground (named after Wil E Coyote)")]
     public float coyote_time = 0.1f;
 
-    //float jump_end;
-    [Tooltip("Time the player moves upwards while jumping")]
-    public float jump_time;
-    [Tooltip("Time the player floats at the top of the jump arc")]
-    public float hang_time = 0.1f;
 
     [Tooltip("An audiosource with the clip for jumping loaded")]
     public AudioSource jump_sound;
@@ -46,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
     public CircleCollider2D body_collider;
 
     //Variables which track the state of the player (with regard to jumping)
-    string state = "falling";
+    string state = "jumping";
     float jump_begin = 0;
 
     //Variables which store the positions from which to detect the ground
@@ -102,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
     //Is in a state where we want to buffer jump commands
     bool inputState()
     {
-        return state == "falling" || Time.time < coyote_end;
+        return state == "jumping" || Time.time < coyote_end;
     }
 
     //In fixed update we put physics calculations which we want to be frame independent
@@ -120,36 +128,53 @@ public class PlayerMovement : MonoBehaviour
         } 
 
         //Sets the horizontal velocity to the input times the speed
-        body.velocity = new Vector2(horizontal * speed, body.velocity.y);
+        
 
         //Runs the state machine which determines where in the jump you are
         switch (state)
         {
             case "grounded": // in coyote time
+            
+                body.velocity = new Vector2(horizontal * speed, body.velocity.y);
+                
                 if (jump_is_buffered)
                     jumpstart();
+                    
 
                 break;
 
             case "jumpstart":  // going upward
-
+            
                 body.velocity = new Vector2(body.velocity.x, jump_impulse);
                 jump_is_buffered = false;
-
-                    state = "falling";
                 
-            
+                if (horizontal != 0) {
+                    body.velocity = new Vector2(Mathf.Clamp(body.velocity.x + horizontal * air_accel, -air_speed, air_speed), body.velocity.y);
+                }
+                else if (horizontal == 0 && body.velocity.x > 0) {
+                    body.velocity = new Vector2(Mathf.Clamp(body.velocity.x - air_fric, 0, body.velocity.x), body.velocity.y);
+                }
+                else if (horizontal == 0 && body.velocity.x < 0) {
+                    body.velocity = new Vector2(Mathf.Clamp(body.velocity.x + air_fric, body.velocity.x, 0), body.velocity.y);
+                }
 
+                state = "jumping";
         
                 break;
 
-            case "falling":  // set in freefall
-
-                body.velocity = new Vector2(body.velocity.x, Mathf.Min(body.velocity.y, 0));
-
-                if (Input.GetKey(KeyCode.W) && Time.time < jump_begin + jump_time + hang_time){
-                    state = "floating";
+            case "jumping":  // set in freefall
+            
+                if (horizontal != 0) {
+                    body.velocity = new Vector2(Mathf.Clamp(body.velocity.x + horizontal * air_accel, -air_speed, air_speed), body.velocity.y);
                 }
+                else if (horizontal == 0 && body.velocity.x > 0) {
+                    body.velocity = new Vector2(Mathf.Clamp(body.velocity.x - air_fric, 0, body.velocity.x), body.velocity.y);
+                }
+                else if (horizontal == 0 && body.velocity.x < 0) {
+                    body.velocity = new Vector2(Mathf.Clamp(body.velocity.x + air_fric, body.velocity.x, 0), body.velocity.y);
+                }
+
+                
                 
                 break;
         }
