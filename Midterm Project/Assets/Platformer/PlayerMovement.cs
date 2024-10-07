@@ -35,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D body;
 
     public GameObject winText;
+    public GameObject loseText;
 
     bool jump_is_buffered;
 
@@ -202,10 +203,19 @@ public class PlayerMovement : MonoBehaviour
         // Check if the collided object is the Sun
         if (other.gameObject.tag == "Sun")
         {
-            Debug.Log("TOUCHED THE SUN!");  // Debug log for collision
+            // Debug.Log("TOUCHED THE SUN!");  // Debug log for collision
             other.gameObject.SetActive(false);  // Deactivate the sun
             winText.SetActive(true);            // Show win text
         }
+
+        if (other.gameObject.tag == "Spikes")
+        {
+            // Debug.Log("TOUCHED THE SUN!");  // Debug log for collision
+            other.gameObject.SetActive(false); 
+            loseText.SetActive(true); // Deactivate the spike or player?
+            //for now they function as trap doors?
+        }
+
     }
 
 
