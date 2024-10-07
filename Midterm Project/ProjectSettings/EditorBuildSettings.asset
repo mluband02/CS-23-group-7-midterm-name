@@ -8,7 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Platformer/PlatformerTestScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Main Scene.unity
     guid: 432066331dd73488d98ba62ffca0b328
+  - enabled: 0
+    path: Assets/Scenes/Main Menu 1.unity
+    guid: 67a3aedffe3fe4c17a92271f9a61ddf6
+  - enabled: 0
+    path: Assets/Scenes/Dalia's Scene.unity
+    guid: 0ccb6920920f24dc786f004626bdde97
   m_configObjects: {}
