@@ -211,9 +211,8 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.tag == "Spikes")
         {
             // Debug.Log("TOUCHED THE SUN!");  // Debug log for collision
-            other.gameObject.SetActive(false); 
-            loseText.SetActive(true); // Deactivate the spike or player?
-            //for now they function as trap doors?
+            this.gameObject.SetActive(false); 
+            loseText.SetActive(true);
         }
 
     }
