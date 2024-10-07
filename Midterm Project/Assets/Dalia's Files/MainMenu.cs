@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject Settings;
+
+    private void Start() {
+        Settings.SetActive(false);
+        
+    }
+
     public void PlayGame() {
         //You can reference load scenes by build index, by scene name (str),
         // or whatever scene is next in order (done here)
