@@ -110,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
     //Is in a state where we want to buffer jump commands
     bool inputState()
     {
-        return state == "jumping" || Time.time < coyote_end;
+        return state == "grounded" ;
     }
 
     //In fixed update we put physics calculations which we want to be frame independent
