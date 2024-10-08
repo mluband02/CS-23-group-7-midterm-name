@@ -403,6 +403,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lose
       objectReference: {fileID: 0}
+    - target: {fileID: 2965713247410251209, guid: d606a5360e01d4bf59a26b297c5fce5b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8650114194285166792, guid: d606a5360e01d4bf59a26b297c5fce5b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1336,7 +1340,7 @@ GameObject:
   - component: {fileID: 1583802194}
   m_Layer: 0
   m_Name: Spikes Ground
-  m_TagString: Untagged
+  m_TagString: Spikes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
