@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Cursor : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class Cursor : MonoBehaviour
    public bool canPlace = true;
    public GameObject Ground;
 
+   // UI text component to display amount of stickers left
+   public TextMeshProUGUI countText;
+   // variable keeping track of sticker count
+   private int count;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +22,11 @@ public class Cursor : MonoBehaviour
       safe.a = 0.5f;
       bad.a = 0.5f;
       gameObject.GetComponent<Renderer>().material.color = safe;
+
+      // initialize count
+      count = 7;
+      // update count display
+      SetCountText();
     }
 
     // Update is called once per frame
@@ -25,10 +35,17 @@ public class Cursor : MonoBehaviour
 
       if (canPlace)
       {
-         if (Input.GetKeyDown(KeyCode.Space)) 
+         // when spaced is pressed and count is larger than 0
+         if (Input.GetKeyDown(KeyCode.Space) && count > 0) 
          {
             print(transform.position);
             Instantiate(Ground, transform.position, Quaternion.identity);
+
+            // update count 
+            count--;
+            SetCountText();
+         } else if(Input.GetKeyDown(KeyCode.Space) && count <= 0){
+            Debug.Log("Oof you ran out of blocks to place :(");
          }
       }
       if (canMove)
@@ -77,5 +94,9 @@ public class Cursor : MonoBehaviour
    {
       gameObject.GetComponent<Renderer>().material.color = safe;
       canPlace = true;
+   }
+
+   void SetCountText(){
+      countText.text = "Available stickers: " + count.ToString();
    }
 }
