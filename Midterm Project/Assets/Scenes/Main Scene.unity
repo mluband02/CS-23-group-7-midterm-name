@@ -246,6 +246,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1717147247712511946, guid: 37faa4405fdab39489566d81d6207fa3, type: 3}
+      propertyPath: Ground
+      value: 
+      objectReference: {fileID: 559019145}
     - target: {fileID: 2047447930373230546, guid: 37faa4405fdab39489566d81d6207fa3, type: 3}
       propertyPath: m_Name
       value: Cursor
