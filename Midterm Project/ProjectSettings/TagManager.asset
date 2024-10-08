@@ -45,3 +45,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 488152831
+    locked: 0
+  - name: Player
+    uniqueID: 2153801065
+    locked: 0
+  - name: Goal
+    uniqueID: 1446456455
+    locked: 0
+  - name: Cursor
+    uniqueID: 3071310631
+    locked: 0
