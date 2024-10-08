@@ -7,10 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject Settings;
 
-    private void Start() {
-        Settings.SetActive(false);
-        
-    }
+
 
     public void PlayGame() {
         //You can reference load scenes by build index, by scene name (str),

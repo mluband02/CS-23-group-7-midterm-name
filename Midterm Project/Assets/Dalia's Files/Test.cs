@@ -25,11 +25,7 @@ public class Test : MonoBehaviour
             grid.SetValue(GameObject.Find("Cursor").transform.position, Instantiate(Ground, GameObject.Find("Cursor").transform.position, Quaternion.identity));
         }
 
-        //reading values on right click
-        // if (Input.GetKey(KeyCode.Space)) {
-        //     //change value inside grid with click:
-        //     Debug.Log(grid.GetValue(GetMouseWorldPosition()));
-        // }
+        
     }
 
 
