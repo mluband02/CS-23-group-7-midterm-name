@@ -11,11 +11,9 @@ public class Test : MonoBehaviour
     public GameObject Ground;
     // public GameObject Sun;
     public GameObject winText;
-    public GameObject loseText;
     // Start is called before the first frame update
     private void Start() {
         winText.SetActive(false);
-        loseText.SetActive(false);
         grid = new Grid(16, 10, 1f, new Vector3(-8f, -5f)); //change f for smaller grid 
     }
 
@@ -23,7 +21,7 @@ public class Test : MonoBehaviour
         if (Input.GetKey(KeyCode.Space)) {
             // Instantiate(Ground, GameObject.Find("Cursor").transform.position, Quaternion.identity);
             //change value inside grid with click:
-            grid.SetValue(GameObject.Find("Cursor").transform.position, Instantiate(Ground, GameObject.Find("Cursor").transform.position, Quaternion.identity));
+          //  grid.SetValue(GameObject.Find("Cursor").transform.position, Instantiate(Ground, GameObject.Find("Cursor").transform.position, Quaternion.identity));
         }
 
         
