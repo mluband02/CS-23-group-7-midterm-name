@@ -15,6 +15,7 @@ public class trampoline : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {    
+        print ("uhhh");
         if (collision.CompareTag("Player") && collision.gameObject.GetComponent<Rigidbody2D>().velocity.y < 0)
         {
             print("ENTERED BOX");
