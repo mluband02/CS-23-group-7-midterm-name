@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9137976693926071477
 SpriteRenderer:
@@ -104,6 +104,9 @@ MonoBehaviour:
   bad: {r: 1, g: 0, b: 0, a: 1}
   canPlace: 1
   Ground: {fileID: 2931110613445598064, guid: 71a4762d789c0474cb2c2b99bb262746, type: 3}
+  Trampoline: {fileID: 8463096671161726013, guid: 8d53afe1950e248e38d6ad8815ba0bbf, type: 3}
+  blockType: 0
+  countText: {fileID: 0}
 --- !u!61 &1866208589165688925
 BoxCollider2D:
   m_ObjectHideFlags: 0

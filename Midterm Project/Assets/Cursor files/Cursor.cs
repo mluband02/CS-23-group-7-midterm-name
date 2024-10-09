@@ -10,6 +10,10 @@ public class Cursor : MonoBehaviour
    public Color bad = Color.red;
    public bool canPlace = true;
    public GameObject Ground;
+   public GameObject Trampoline;
+   // int = 0 is ground
+   // int = 1 is trampoline
+   public int blockType;
 
    // UI text component to display amount of stickers left
    public TextMeshProUGUI countText;
@@ -22,6 +26,8 @@ public class Cursor : MonoBehaviour
       safe.a = 0.5f;
       bad.a = 0.5f;
       gameObject.GetComponent<Renderer>().material.color = safe;
+      blockType = 0;
+      canMove = true;
 
       // initialize count
       count = 7;
@@ -38,8 +44,14 @@ public class Cursor : MonoBehaviour
          // when spaced is pressed and count is larger than 0
          if (Input.GetKeyDown(KeyCode.Space) && count > 0) 
          {
-            print(transform.position);
-            Instantiate(Ground, transform.position, Quaternion.identity);
+            if (blockType == 0)
+            {
+               Instantiate(Ground, transform.position, Quaternion.identity);
+            }
+            if (blockType == 1)
+            {
+               Instantiate(Trampoline,transform.position, Quaternion.identity);
+            }
 
             // update count 
             count--;
@@ -48,6 +60,21 @@ public class Cursor : MonoBehaviour
             Debug.Log("Oof you ran out of blocks to place :(");
          }
       }
+
+      // changes block type
+      if (Input.GetKeyDown("z"))
+      {
+         if (blockType == 0)
+         {
+            blockType = 1;
+         }
+         else
+         {
+            blockType = 0;
+         }
+      }
+
+      //movement code
       if (canMove)
       {
         if (Input.GetKey("up") && transform.position.y != 4.5)
@@ -84,6 +111,7 @@ public class Cursor : MonoBehaviour
       canMove = true;
    }
 
+   //stops block placement when over other object
    void OnTriggerEnter2D(Collider2D other)
    {
       gameObject.GetComponent<Renderer>().material.color = bad;
