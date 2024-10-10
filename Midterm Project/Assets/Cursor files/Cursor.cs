@@ -23,8 +23,8 @@ public class Cursor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      safe.a = 0.5f;
-      bad.a = 0.5f;
+      safe.a = 0.25f;
+      bad.a = 0.25f;
       gameObject.GetComponent<Renderer>().material.color = safe;
       blockType = 0;
       canMove = true;
@@ -50,7 +50,9 @@ public class Cursor : MonoBehaviour
             }
             if (blockType == 1)
             {
-               Instantiate(Trampoline,transform.position, Quaternion.identity);
+               Vector3 adjust = transform.position;
+               adjust.y-=0.5f;
+               Instantiate(Trampoline, adjust, Quaternion.identity);
             }
 
             // update count 
@@ -67,10 +69,13 @@ public class Cursor : MonoBehaviour
          if (blockType == 0)
          {
             blockType = 1;
+            gameObject.transform.localScale = new Vector3 (1.9f, 0.9f, 1f);
+
          }
          else
          {
             blockType = 0;
+            gameObject.transform.localScale = new Vector3 (2.9f, 0.9f, 1f);
          }
       }
 
@@ -127,4 +132,5 @@ public class Cursor : MonoBehaviour
    void SetCountText(){
       countText.text = "Available stickers: " + count.ToString();
    }
+
 }
