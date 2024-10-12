@@ -63,6 +63,8 @@ public class PlayerMovement : MonoBehaviour
     Vector2 right_foot;
     #endregion
 
+    private Animator anim;
+
     private void Awake()
     {
         //Gets the circle's radius, scaled to accurately represent the distance in world space
@@ -75,6 +77,8 @@ public class PlayerMovement : MonoBehaviour
         //Initializes the vectors
         left_foot = new Vector2(-xDisplacement, 0);
         right_foot = new Vector2(xDisplacement, 0);
+
+        anim = GetComponentInChildren<Animator>();
     }
 
     // In update we put checks which we want to run as often as possible, like
@@ -122,11 +126,18 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A)){
             // move left
             horizontal = -1;
+            anim.SetBool("walk", true);
         } 
-        if (Input.GetKey(KeyCode.D)){
+        else if (Input.GetKey(KeyCode.D)){
             // move right
             horizontal = 1;
+            anim.SetBool("walk", true);
         } 
+
+        else
+        {
+            anim.SetBool("walk", false);
+        }
 
         //Sets the horizontal velocity to the input times the speed
         
@@ -198,6 +209,7 @@ public class PlayerMovement : MonoBehaviour
         state = "jumping";
     }
 
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the collided object is the Sun
@@ -229,6 +241,26 @@ public class PlayerMovement : MonoBehaviour
         if(collision.relativeVelocity.sqrMagnitude > dust_threshold * dust_threshold)
         {
             Instantiate(dust, transform);
+        }
+
+        // jump animator
+        if (collision.gameObject.tag == "Ground")
+        {
+
+            anim.SetBool("jump", false);
+        }
+        else
+        {
+            anim.SetBool("jump", true);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+
+            anim.SetBool("jump", true);
         }
     }
 }
