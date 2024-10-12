@@ -37,7 +37,7 @@ public class GameHandler : MonoBehaviour{
         // }
 
         public void RestartGame(){
-                SceneManager.LoadScene("MainMenu");
+                SceneManager.LoadScene(0);
         }
 
         public void QuitGame(){
