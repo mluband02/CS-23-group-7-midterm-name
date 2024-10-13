@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject winText;
     public GameObject loseText;
     public GameObject resetButton;
+    public GameObject nextLevel;
 
     bool jump_is_buffered;
 
@@ -219,7 +220,8 @@ public class PlayerMovement : MonoBehaviour
             // Debug.Log("TOUCHED THE SUN!");  // Debug log for collision
             other.gameObject.SetActive(false);  // Deactivate the sun
             this.gameObject.SetActive(false);
-            winText.SetActive(true);            // Show win text
+            winText.SetActive(true);
+            nextLevel.SetActive(true);             // Show win text
         }
 
         if (other.gameObject.tag == "Spikes")

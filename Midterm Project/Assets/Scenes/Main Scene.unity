@@ -9933,6 +9933,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2077836435213150908, guid: 1625796e5ee2f3d41a756b1cc135bb14, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077836435213150908, guid: 1625796e5ee2f3d41a756b1cc135bb14, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2077836435213150908, guid: 1625796e5ee2f3d41a756b1cc135bb14, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2931110613445598064, guid: 1625796e5ee2f3d41a756b1cc135bb14, type: 3}
       propertyPath: m_Name
       value: Ground

@@ -52,4 +52,8 @@ public class GameHandler : MonoBehaviour{
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             Debug.Log("The button is working");
         }
+
+        public void NextLevel2() {
+            SceneManager.LoadScene("Main Scene");
+        }
 }
