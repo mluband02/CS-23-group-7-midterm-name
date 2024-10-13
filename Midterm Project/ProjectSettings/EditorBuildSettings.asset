@@ -12,9 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu 1.unity
     guid: 67a3aedffe3fe4c17a92271f9a61ddf6
   - enabled: 1
+    path: Assets/Scenes/Dalia's Test Scene.unity
+    guid: ebc9daf22614a45c38ca54c72334f06a
+  - enabled: 1
     path: Assets/Scenes/Main Scene.unity
     guid: 432066331dd73488d98ba62ffca0b328
   - enabled: 0
     path: Assets/Scenes/Dalia's Scene.unity
     guid: 0ccb6920920f24dc786f004626bdde97
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: bd6ebfe0b5c8e4c6f97aabfca7a197f4
   m_configObjects: {}
