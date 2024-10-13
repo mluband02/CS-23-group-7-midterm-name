@@ -965,7 +965,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Move player with keys \"w,\" \"a,\" \"d\"\nMove cursor (white block) with
     arrow keys\nPress spacebar to generate platform for player \nGOAL: get to the
-    yellow circle to win\n"
+    yellow star to win\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 06cae48802f93489e82428e87f2765ca, type: 2}
   m_sharedMaterial: {fileID: 4798779226182398706, guid: 06cae48802f93489e82428e87f2765ca, type: 2}
