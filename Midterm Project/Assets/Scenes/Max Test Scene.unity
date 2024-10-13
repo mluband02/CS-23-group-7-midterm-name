@@ -868,73 +868,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Playerbody
       objectReference: {fileID: 0}
-    - target: {fileID: 4540737328117837252, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4540737328447848306, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.0938
-      objectReference: {fileID: 0}
-    - target: {fileID: 4540737328447848306, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.0938
-      objectReference: {fileID: 0}
-    - target: {fileID: 4540737328447848306, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.0938
-      objectReference: {fileID: 0}
-    - target: {fileID: 4540737328447848306, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.026
-      objectReference: {fileID: 0}
-    - target: {fileID: 4540737328447848306, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.413
-      objectReference: {fileID: 0}
-    - target: {fileID: 4540737328447848319, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 7f30d950de9fe48a496a4b92134ee9f5, type: 3}
-    - target: {fileID: 8740954550102503999, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
-      propertyPath: speed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8740954550102503999, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
-      propertyPath: gravity
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8740954550102503999, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
       propertyPath: winText
       value: 
       objectReference: {fileID: 502773064}
     - target: {fileID: 8740954550102503999, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
-      propertyPath: air_fric
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8740954550102503999, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
       propertyPath: loseText
       value: 
       objectReference: {fileID: 1198345918}
-    - target: {fileID: 8740954550102503999, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
-      propertyPath: air_accel
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8740954550102503999, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
-      propertyPath: air_speed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8740954550102503999, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
-      propertyPath: jumpable.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4540737328447848307, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1661398220}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
 --- !u!1 &1198345918 stripped
 GameObject:
@@ -9537,32 +9482,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &1661398216 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4540737328447848307, guid: 68d1d21cc1ff530439d1535679bfd41b, type: 3}
-  m_PrefabInstance: {fileID: 1087327688}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1661398220
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1661398216}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3f631b1256ab2904bbc2f471e598f06e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1669005858
 PrefabInstance:
   m_ObjectHideFlags: 0
