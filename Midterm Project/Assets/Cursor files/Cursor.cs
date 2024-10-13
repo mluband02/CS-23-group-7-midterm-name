@@ -135,10 +135,9 @@ public class Cursor : MonoBehaviour
 
    public void IncreaseStickerCount() {
 
-        if (count < 7) {
+
             count++;
             SetCountText();
-        } 
     }
 
 

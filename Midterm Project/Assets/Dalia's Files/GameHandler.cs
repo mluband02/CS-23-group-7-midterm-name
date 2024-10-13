@@ -47,4 +47,9 @@ public class GameHandler : MonoBehaviour{
                 Application.Quit();
                 #endif
         }
+
+        public void ResetGame() {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Debug.Log("The button is working");
+        }
 }

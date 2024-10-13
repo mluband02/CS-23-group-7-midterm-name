@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject winText;
     public GameObject loseText;
+    public GameObject resetButton;
 
     bool jump_is_buffered;
 
@@ -226,6 +227,7 @@ public class PlayerMovement : MonoBehaviour
             // Debug.Log("TOUCHED THE SUN!");  // Debug log for collision
             this.gameObject.SetActive(false); 
             loseText.SetActive(true);
+            resetButton.SetActive(true);
         }
 
     }
