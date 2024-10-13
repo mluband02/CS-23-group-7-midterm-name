@@ -50,9 +50,9 @@ public class Cursor : MonoBehaviour
             }
             if (blockType == 1)
             {
-               Vector3 adjust = transform.position;
-               adjust.y-=0.5f;
-               Instantiate(Trampoline, adjust, Quaternion.identity);
+              // Vector3 adjust = transform.position;
+              // adjust.y-=0.5f;
+               Instantiate(Trampoline, transform.position, Quaternion.identity);
             }
 
             // update count 
