@@ -133,4 +133,10 @@ public class Cursor : MonoBehaviour
       countText.text = "Available stickers: " + count.ToString();
    }
 
+   public void IncreaseStickerCount() {
+        count++;
+        SetCountText(); 
+    }
+
+
 }
