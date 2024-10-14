@@ -1273,6 +1273,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1713195284873311980, guid: 056ea3872e097462fbd4e0a76cadc647, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 464.7663
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713195284873311980, guid: 056ea3872e097462fbd4e0a76cadc647, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 149.30612
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503223112450533122, guid: 056ea3872e097462fbd4e0a76cadc647, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9007317744162860349, guid: 056ea3872e097462fbd4e0a76cadc647, type: 3}
       propertyPath: m_Name
       value: Pause Canvas
