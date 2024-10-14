@@ -132,11 +132,9 @@ public class Cursor : MonoBehaviour
    //stops block placement when over other object
    void OnTriggerEnter2D(Collider2D other)
    {
-      if (other.gameObject.tag != "Eraser")
-      {
+
       gameObject.GetComponent<Renderer>().material.color = bad;
       canPlace = false;
-      }
    }
 
    void OnTriggerExit2D(Collider2D other)
