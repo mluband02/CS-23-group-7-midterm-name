@@ -1246,11 +1246,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3182201935019566185, guid: 8d53afe1950e248e38d6ad8815ba0bbf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.7
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 3182201935019566185, guid: 8d53afe1950e248e38d6ad8815ba0bbf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.11
+      value: -1.07
       objectReference: {fileID: 0}
     - target: {fileID: 3182201935019566185, guid: 8d53afe1950e248e38d6ad8815ba0bbf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1393,9 +1393,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 151.551
       objectReference: {fileID: 0}
+    - target: {fileID: 5302349633591356245, guid: 056ea3872e097462fbd4e0a76cadc647, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1359147318}
+    - target: {fileID: 5302349633591356245, guid: 056ea3872e097462fbd4e0a76cadc647, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
+      objectReference: {fileID: 0}
     - target: {fileID: 8503223112450533122, guid: 056ea3872e097462fbd4e0a76cadc647, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9007317744162860349, guid: 056ea3872e097462fbd4e0a76cadc647, type: 3}
       propertyPath: m_Name
@@ -1443,6 +1451,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6408874561269829580, guid: b03bb7f656e1c49b3ae59ddc9122577f, type: 3}
   m_PrefabInstance: {fileID: 1478223983}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1359147318 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1634541285453833073, guid: b03bb7f656e1c49b3ae59ddc9122577f, type: 3}
+  m_PrefabInstance: {fileID: 1478223983}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359147317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: edfc6e7426f8449539c5ff3aab1ba394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1400419298
 GameObject:
   m_ObjectHideFlags: 0
@@ -10691,7 +10710,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3248204733719048836, guid: c55614c8fee38426394b85b35180ca47, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.55
+      value: -7.43
       objectReference: {fileID: 0}
     - target: {fileID: 3248204733719048836, guid: c55614c8fee38426394b85b35180ca47, type: 3}
       propertyPath: m_LocalPosition.y

@@ -1281,6 +1281,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 162.13089
       objectReference: {fileID: 0}
+    - target: {fileID: 5302349633591356245, guid: 056ea3872e097462fbd4e0a76cadc647, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1478223984}
+    - target: {fileID: 5302349633591356245, guid: 056ea3872e097462fbd4e0a76cadc647, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartGame
+      objectReference: {fileID: 0}
     - target: {fileID: 8503223112450533122, guid: 056ea3872e097462fbd4e0a76cadc647, type: 3}
       propertyPath: m_IsActive
       value: 0
