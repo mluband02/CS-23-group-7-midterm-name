@@ -12,7 +12,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame() {
         //You can reference load scenes by build index, by scene name (str),
         // or whatever scene is next in order (done here)
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);
     }
 
     public void QuitGame() {

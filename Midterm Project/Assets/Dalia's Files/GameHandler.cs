@@ -37,6 +37,7 @@ public class GameHandler : MonoBehaviour{
         // }
 
         public void RestartGame(){
+                Time.timeScale = 1.0f;
                 SceneManager.LoadScene(0);
         }
 

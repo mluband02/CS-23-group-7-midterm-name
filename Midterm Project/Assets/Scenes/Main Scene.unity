@@ -1302,6 +1302,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 056ea3872e097462fbd4e0a76cadc647, type: 3}
+--- !u!114 &1308907109 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7414605638355233098, guid: 056ea3872e097462fbd4e0a76cadc647, type: 3}
+  m_PrefabInstance: {fileID: 1308907108}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b0fa3d2738204af29959249ffaa750f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1400419298
 GameObject:
   m_ObjectHideFlags: 0
@@ -10168,10 +10179,10 @@ PrefabInstance:
     - target: {fileID: 1114030846600855904, guid: e3bdb2eedf0354a1e90a644760758e2c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1308907109}
     - target: {fileID: 1114030846600855904, guid: e3bdb2eedf0354a1e90a644760758e2c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: PauseGame
       objectReference: {fileID: 0}
     - target: {fileID: 1128375520193904717, guid: e3bdb2eedf0354a1e90a644760758e2c, type: 3}
       propertyPath: m_UiScaleMode
