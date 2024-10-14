@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Cursor : MonoBehaviour
 {
@@ -29,10 +30,14 @@ public class Cursor : MonoBehaviour
       blockType = 0;
       canMove = true;
 
-      // initialize count
-      count = 7;
-      // update count display
-      SetCountText();
+    //   // initialize count
+    //   count = 7;
+    //   // update count display
+    //   SetCountText();
+
+
+      // Set initial sticker count based on the level
+      SetInitialStickerCount();
     }
 
     // Update is called once per frame
@@ -64,6 +69,7 @@ public class Cursor : MonoBehaviour
             // update count 
             count--;
             SetCountText();
+
          } else if(Input.GetKeyDown(KeyCode.Space) && count <= 0){
             Debug.Log("Oof you ran out of blocks to place :(");
          }
@@ -138,6 +144,26 @@ public class Cursor : MonoBehaviour
    void SetCountText(){
       countText.text = "Available stickers: " + count.ToString();
    }
+
+   public void SetInitialStickerCount()
+    {
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        if (currentScene == "Main Scene") 
+        {
+            count = 1; // Only allow 1 sticker in the Main Scene
+        }
+        else if (currentScene == "Level 3") 
+        {
+            count = 2; // Allow 2 stickers in Level 3
+        }
+        else 
+        {
+            count = 7; // Default value or another level-specific value
+        }
+        
+        SetCountText();
+    }
 
    public void IncreaseStickerCount() {
 
