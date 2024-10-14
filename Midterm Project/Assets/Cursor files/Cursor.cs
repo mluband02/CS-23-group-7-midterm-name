@@ -145,6 +145,8 @@ public class Cursor : MonoBehaviour
       countText.text = "Available stickers: " + count.ToString();
    }
 
+
+    // Add more stickers for different levels 
    public void SetInitialStickerCount()
     {
         string currentScene = SceneManager.GetActiveScene().name;
@@ -155,7 +157,11 @@ public class Cursor : MonoBehaviour
         }
         else if (currentScene == "Level 3") 
         {
-            count = 2; // Allow 2 stickers in Level 3
+            count = 1; // Allow 2 stickers in Level 3
+        }
+        else if (currentScene == "Level 4")
+        {
+            count = 1;
         }
         else 
         {
