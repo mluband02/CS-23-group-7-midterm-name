@@ -10157,6 +10157,14 @@ PrefabInstance:
       propertyPath: m_UiScaleMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2758407961539854742, guid: e3bdb2eedf0354a1e90a644760758e2c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2758407961539854742, guid: e3bdb2eedf0354a1e90a644760758e2c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -191
+      objectReference: {fileID: 0}
     - target: {fileID: 4586155697621825505, guid: e3bdb2eedf0354a1e90a644760758e2c, type: 3}
       propertyPath: m_Pivot.x
       value: 0

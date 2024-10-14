@@ -46,7 +46,13 @@ public class Cursor : MonoBehaviour
          {
             if (blockType == 0)
             {
-               Instantiate(Ground, transform.position, Quaternion.identity);
+               GameObject newGround = Instantiate(Ground, transform.position, Quaternion.identity);
+               // Set 'isOriginal' to false for the newly instantiated ground
+               Ground groundComponent = newGround.GetComponent<Ground>();
+               if (groundComponent != null)
+               {
+                   groundComponent.isOriginal = false;
+               }
             }
             if (blockType == 1)
             {
@@ -134,7 +140,6 @@ public class Cursor : MonoBehaviour
    }
 
    public void IncreaseStickerCount() {
-
 
             count++;
             SetCountText();
