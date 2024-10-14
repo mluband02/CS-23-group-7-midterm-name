@@ -141,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9093719766722927385, guid: 70a46d020e0264988b0a51fc0d9d6604, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.91
+      value: -7.37
       objectReference: {fileID: 0}
     - target: {fileID: 9093719766722927385, guid: 70a46d020e0264988b0a51fc0d9d6604, type: 3}
       propertyPath: m_LocalPosition.y
@@ -383,6 +383,10 @@ PrefabInstance:
     - target: {fileID: 1928941114917902028, guid: d606a5360e01d4bf59a26b297c5fce5b, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970314841620697145, guid: d606a5360e01d4bf59a26b297c5fce5b, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2965713247410251209, guid: d606a5360e01d4bf59a26b297c5fce5b, type: 3}
       propertyPath: m_Name
@@ -1264,7 +1268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -10075,6 +10079,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1128375520193904717, guid: e3bdb2eedf0354a1e90a644760758e2c, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4586155697621825505, guid: e3bdb2eedf0354a1e90a644760758e2c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -10187,6 +10195,10 @@ PrefabInstance:
     - target: {fileID: 422232988839063781, guid: 021576a2fca5042c0a3b5a48d60265de, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084580188601878512, guid: 021576a2fca5042c0a3b5a48d60265de, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6662076682047689662, guid: 021576a2fca5042c0a3b5a48d60265de, type: 3}
       propertyPath: m_Pivot.x
@@ -10315,7 +10327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3248204733719048836, guid: c55614c8fee38426394b85b35180ca47, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.72
+      value: 3.8
       objectReference: {fileID: 0}
     - target: {fileID: 3248204733719048836, guid: c55614c8fee38426394b85b35180ca47, type: 3}
       propertyPath: m_LocalPosition.z
