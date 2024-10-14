@@ -163,6 +163,10 @@ public class Cursor : MonoBehaviour
         {
             count = 1;
         }
+        else if (currentScene == "Level 7")
+        {
+            count = 3;
+        }
         else 
         {
             count = 7; // Default value or another level-specific value

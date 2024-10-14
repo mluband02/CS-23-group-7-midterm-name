@@ -65,4 +65,8 @@ public class GameHandler : MonoBehaviour{
         public void NextLevel4() {
             SceneManager.LoadScene("Level 4");
         }
+
+        public void NextLevel7() {
+            SceneManager.LoadScene("Level 7");
+        }
 }
