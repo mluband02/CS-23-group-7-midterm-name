@@ -24,8 +24,8 @@ public class Cursor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      safe.a = 0.25f;
-      bad.a = 0.25f;
+      safe.a = 0.75f;
+      bad.a = 0.75f;
       gameObject.GetComponent<Renderer>().material.color = safe;
       blockType = 0;
       canMove = true;
@@ -70,8 +70,9 @@ public class Cursor : MonoBehaviour
             count--;
             SetCountText();
 
-         } else if(Input.GetKeyDown(KeyCode.Space) && count <= 0){
+         } else if(count <= 0){
             Debug.Log("Oof you ran out of blocks to place :(");
+            gameObject.GetComponent<Renderer>().material.color = bad;
          }
       }
 
@@ -131,8 +132,11 @@ public class Cursor : MonoBehaviour
    //stops block placement when over other object
    void OnTriggerEnter2D(Collider2D other)
    {
+      if (other.gameObject.tag != "Eraser")
+      {
       gameObject.GetComponent<Renderer>().material.color = bad;
       canPlace = false;
+      }
    }
 
    void OnTriggerExit2D(Collider2D other)
