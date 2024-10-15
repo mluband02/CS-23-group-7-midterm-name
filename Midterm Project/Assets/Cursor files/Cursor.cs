@@ -95,30 +95,65 @@ public class Cursor : MonoBehaviour
       //movement code
       if (canMove)
       {
-        if (Input.GetKey("up") && transform.position.y != 4.5)
-        {
-           transform.position += Vector3.up * 1f;
-           StopCoroutine(MoveDelay());
-           StartCoroutine(MoveDelay());
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        // Add OR expression to add other levels with less restricted placement
+        if (currentScene == "Level 10" || currentScene == "Level 11") {
+            // Debug.Log("LEVEL 10!");
+            if (Input.GetKey("up") && transform.position.y != 5)
+            {
+                transform.position += Vector3.up * 1f;
+                StopCoroutine(MoveDelay());
+                StartCoroutine(MoveDelay());
+            }
+            if (Input.GetKey("down") && transform.position.y != -5)
+            {
+                transform.position += Vector3.down * 1f;
+                StopCoroutine(MoveDelay());
+                StartCoroutine(MoveDelay());
+            }
+            if (Input.GetKey("left") && transform.position.x != -7.5)
+            {
+                transform.position += Vector3.left * 1f;
+                StopCoroutine(MoveDelay());
+                StartCoroutine(MoveDelay());
+            }
+            if (Input.GetKey("right") && transform.position.x != 7.5)
+            {
+                transform.position += Vector3.right * 1f;
+                StopCoroutine(MoveDelay());
+                StartCoroutine(MoveDelay());
+            }
+
+        } else {
+
+            if (Input.GetKey("up") && transform.position.y != 4.5)
+            {
+                transform.position += Vector3.up * 1f;
+                StopCoroutine(MoveDelay());
+                StartCoroutine(MoveDelay());
+            }
+            if (Input.GetKey("down") && transform.position.y != -4.5)
+            {
+                transform.position += Vector3.down * 1f;
+                StopCoroutine(MoveDelay());
+                StartCoroutine(MoveDelay());
+            }
+            if (Input.GetKey("left") && transform.position.x != -7.5)
+            {
+                transform.position += Vector3.left * 1f;
+                StopCoroutine(MoveDelay());
+                StartCoroutine(MoveDelay());
+            }
+            if (Input.GetKey("right") && transform.position.x != 7.5)
+            {
+                transform.position += Vector3.right * 1f;
+                StopCoroutine(MoveDelay());
+                StartCoroutine(MoveDelay());
+            }
+
         }
-        if (Input.GetKey("down") && transform.position.y != -4.5)
-        {
-           transform.position += Vector3.down * 1f;
-           StopCoroutine(MoveDelay());
-           StartCoroutine(MoveDelay());
-        }
-        if (Input.GetKey("left") && transform.position.x != -7.5)
-        {
-           transform.position += Vector3.left * 1f;
-           StopCoroutine(MoveDelay());
-           StartCoroutine(MoveDelay());
-        }
-        if (Input.GetKey("right") && transform.position.x != 7.5)
-        {
-           transform.position += Vector3.right * 1f;
-           StopCoroutine(MoveDelay());
-           StartCoroutine(MoveDelay());
-        }
+        
       }
     }
 
