@@ -55,7 +55,7 @@ public class GameHandler : MonoBehaviour{
         }
 
         public void NextLevel2() {
-            SceneManager.LoadScene("Main Scene");
+            SceneManager.LoadScene("Level 2");
         }
 
         public void NextLevel3() {
@@ -64,6 +64,10 @@ public class GameHandler : MonoBehaviour{
 
         public void NextLevel4() {
             SceneManager.LoadScene("Level 4");
+        }
+
+        public void NextLevel5() {
+            SceneManager.LoadScene("Level 5");
         }
 
         public void NextLevel7() {

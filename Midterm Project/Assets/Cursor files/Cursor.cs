@@ -153,7 +153,7 @@ public class Cursor : MonoBehaviour
     {
         string currentScene = SceneManager.GetActiveScene().name;
 
-        if (currentScene == "Main Scene") 
+        if (currentScene == "Level 2") 
         {
             count = 1; // Only allow 1 sticker in the Main Scene
         }
@@ -164,6 +164,10 @@ public class Cursor : MonoBehaviour
         else if (currentScene == "Level 4")
         {
             count = 1;
+        } 
+        else if (currentScene == "Level 5")
+        {
+            count = 3;
         }
         else if (currentScene == "Level 7")
         {
