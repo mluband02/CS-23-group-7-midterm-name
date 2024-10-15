@@ -204,11 +204,11 @@ public class Cursor : MonoBehaviour
         {
             count = 3;
         }
-        else if (currentScene == "Level 6")
+        else if (currentScene == "Level 6" || currentScene == "Level 9")
         {
             count = 2;
         }
-        else if (currentScene == "Level 7")
+        else if (currentScene == "Level 7" || currentScene == "Level 8")
         {
             count = 3;
         }
