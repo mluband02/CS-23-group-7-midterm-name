@@ -169,6 +169,10 @@ public class Cursor : MonoBehaviour
         {
             count = 3;
         }
+        else if (currentScene == "Level 6")
+        {
+            count = 2;
+        }
         else if (currentScene == "Level 7")
         {
             count = 3;
