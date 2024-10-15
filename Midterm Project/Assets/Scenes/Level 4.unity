@@ -1284,6 +1284,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6325637865560122884, guid: 8d53afe1950e248e38d6ad8815ba0bbf, type: 3}
+      propertyPath: m_TagString
+      value: Trampoline
+      objectReference: {fileID: 0}
     - target: {fileID: 8463096671161726013, guid: 8d53afe1950e248e38d6ad8815ba0bbf, type: 3}
       propertyPath: m_Name
       value: Trampoline

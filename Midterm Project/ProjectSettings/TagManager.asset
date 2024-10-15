@@ -9,6 +9,8 @@ TagManager:
   - Settings
   - GameHandler
   - Ground
+  - Eraser
+  - Trampoline
   layers:
   - Default
   - TransparentFX

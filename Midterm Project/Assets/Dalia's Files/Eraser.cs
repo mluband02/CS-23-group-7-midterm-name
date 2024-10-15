@@ -61,6 +61,13 @@ public class Eraser : MonoBehaviour
                 cursor.IncreaseStickerCount(); 
             }
         }
+
+        // if (other.gameObject.CompareTag("Trampoline")) {
+        //     Debug.Log("TRAMPOLINE!");
+        //     Destroy(other.gameObject);
+        //     Cursor cursor = FindObjectOfType<Cursor>();
+        //     cursor.IncreaseStickerCount(); 
+        // }
     }
 }
 
