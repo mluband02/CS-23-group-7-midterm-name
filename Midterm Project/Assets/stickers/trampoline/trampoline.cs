@@ -13,10 +13,10 @@ public class trampoline : MonoBehaviour
     #endregion
     
     
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {    
         print ("uhhh");
-        if (collision.CompareTag("Player") && collision.gameObject.GetComponent<Rigidbody2D>().velocity.y < 0)
+        if (collision.gameObject.CompareTag("Player") && collision.gameObject.GetComponent<Rigidbody2D>().velocity.y < 0)
         {
             print("ENTERED BOX");
             transform.localScale = Vector3.Lerp(actual_stretch, actual_stretch, elasticity);
